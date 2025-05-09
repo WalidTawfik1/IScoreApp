@@ -1,0 +1,30 @@
+﻿@model IScoreApp.Models.UserScore
+
+<div class="container mt-5">
+    <div class="row justify-content-center">
+        <div class="col-md-8">
+            <div class="card shadow-lg rounded-4">
+                <div class="card-header bg-success text-white text-center">
+                    <h3>Your Credit Score Result</h3>
+                </div>
+                <div class="card-body">
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item"><strong>User ID:</strong> @Model.UserId</li>
+                        <li class="list-group-item"><strong>On-Time Payments:</strong> @Model.OnTimePayments / @Model.TotalPayments</li>
+                        <li class="list-group-item"><strong>Used Credit:</strong> @Model.UsedCredit EGP</li>
+                        <li class="list-group-item"><strong>Credit Limit:</strong> @Model.CreditLimit EGP</li>
+                        <li class="list-group-item"><strong>Account Age:</strong> @(DateTime.Now.Year - Model.AccountOpenDate.Year) years</li>
+                        <li class="list-group-item"><strong>Credit Mix:</strong> @Model.UsedTypes / @Model.TotalTypes types</li>
+                        <li class="list-group-item"><strong>Final Score (Raw %):</strong> @Model.FinalScore%</li>
+                        <li class="list-group-item text-center">
+                            <h4>Scaled Score: <span class="badge bg-success fs-4">@Model.ScaledScore</span> <small>(300–850)</small></h4>
+                        </li>
+                    </ul>
+                </div>
+                <div class="card-footer text-center">
+                    <a asp-action="Index" class="btn btn-outline-primary mt-2">Check Another Email</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

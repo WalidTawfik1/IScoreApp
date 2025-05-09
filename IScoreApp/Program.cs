@@ -31,7 +31,7 @@ namespace IScoreApp
 
             app.MapControllerRoute(
                 name: "default",
-                pattern: "{controller=Home}/{action=Index}/{id?}");
+                pattern: "{controller=Credit}/{action=Index}/{id?}");
 
             app.Run();
         }
