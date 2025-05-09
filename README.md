@@ -24,3 +24,17 @@ This ASP.NET Core MVC web application calculates a user's credit score based on 
 ```text
 finalScore = 0.35 * paymentScore + 0.30 * debtScore + 0.15 * historyScore + 0.20 * mixScore
 scaledScore = 300 + ((finalScore / 100) * 550)
+```
+
+## 🚀 Getting Started
+
+1. Clone the repo
+2. Add your configuration in `appsettings.json` and `.env`
+3. Launch the project and test it
+
+---
+
+## 🔗 Links
+
+- [Live Preview](http://creditscore.runasp.net/)
+- [GitHub Repository](https://github.com/WalidTawfik1/IScoreApp)
