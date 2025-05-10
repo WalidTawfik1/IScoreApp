@@ -36,5 +36,5 @@ scaledScore = 300 + ((finalScore / 100) * 550)
 
 ## 🔗 Links
 
-- [Live Preview](http://creditscore.runasp.net/)
+- [Live Preview](http://creditscore.runasp.net/), Use this account for testing ahmed.hassan@example.com
 - [GitHub Repository](https://github.com/WalidTawfik1/IScoreApp)
