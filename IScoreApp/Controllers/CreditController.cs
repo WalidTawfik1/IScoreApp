@@ -35,7 +35,7 @@ namespace IScoreApp.Controllers
 
         private int? GetUserIdByEmail(string email)
         {
-            string userConnStr = Environment.GetEnvironmentVariable("Users_PaymentHistory");
+            string userConnStr = Environment.GetEnvironmentVariable("Users");
 
             using var conn = new SqlConnection(userConnStr);
             conn.Open();
@@ -49,7 +49,7 @@ namespace IScoreApp.Controllers
         {
             var score = new UserScore { UserId = userId };
 
-            using (var conn = new SqlConnection(Environment.GetEnvironmentVariable("Users_PaymentHistory")))
+            using (var conn = new SqlConnection(Environment.GetEnvironmentVariable("PaymentHistory")))
             {
                 conn.Open();
                 var cmd1 = new SqlCommand("SELECT COUNT(*) FROM Payments WHERE user_id = @uid", conn);
